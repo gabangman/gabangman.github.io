@@ -1,5 +1,6 @@
 # Gabangman Studio authorized advertising sellers
 ownerdomain=gabangman.github.io
+ironsrc.com, 695535, DIRECT
 google.com, pub-8675074039588692, DIRECT, f08c47fec0942fa0
 adwmg.com, 159512, RESELLER, c9688a22012618e7
 appads.in, 106246, RESELLER
