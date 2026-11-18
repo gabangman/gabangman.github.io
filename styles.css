@@ -29,8 +29,9 @@ img { display: block; max-width: 100%; }
 }
 .header-band a:focus-visible, .hero-band a:focus-visible { outline-color: var(--stage-accent); }
 .site-header { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding-block: 22px; border-bottom: 1px solid #e5edff24; }
-.wordmark { font-size: clamp(1.16rem, 2.5vw, 2rem); font-weight: 900; letter-spacing: -.055em; text-decoration: none; white-space: nowrap; }
-.wordmark span { color: var(--stage-accent); }
+.wordmark { display: inline-flex; align-items: center; gap: clamp(4px, 1vw, 10px); font-size: clamp(1.16rem, 2.5vw, 2rem); font-weight: 900; letter-spacing: -.055em; text-decoration: none; white-space: nowrap; }
+.brand-name > span { color: var(--stage-accent); }
+.brand-icon { display: block; width: clamp(30px, 4.3vw, 52px); height: auto; flex: none; }
 .header-actions, .site-nav { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 34px); }
 .site-header nav a { font-weight: 800; text-decoration: none; color: var(--stage-muted); white-space: nowrap; }
 .language { display: flex; gap: 2px; padding: 3px; background: #253047; border-radius: 999px; }
@@ -93,6 +94,7 @@ h1 em { font-style: normal; color: var(--stage-accent); }
   .site-header { padding-block: 14px; gap: 10px; }
   .site-nav { display: none; }
   .language a { font-size: .77rem; }
+  .wordmark { font-size: clamp(.98rem, 3.4vw, 1.16rem); }
   .hero-gallery { grid-template: auto auto / repeat(2, minmax(0, 1fr)); aspect-ratio: auto; }
   .hero-feature { grid-row: auto; grid-column: span 2; aspect-ratio: 2.048; }
   .hero-tile { aspect-ratio: 2.05; }
@@ -100,5 +102,11 @@ h1 em { font-style: normal; color: var(--stage-accent); }
   .archive-grid { gap: 12px; }
   .game h3 { font-size: 1.45rem; }
   .site-footer { align-items: start; flex-direction: column; }
+}
+@media (max-width: 360px) {
+  .site-header { width: calc(100% - 24px); gap: 6px; }
+  .wordmark { font-size: .92rem; }
+  .brand-icon { width: 26px; }
+  .language a { padding-inline: .45em; }
 }
 @media (prefers-reduced-motion: reduce) { :root { scroll-behavior: auto; } .hero-gallery img { transition: none; } }
