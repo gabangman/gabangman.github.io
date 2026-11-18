@@ -53,15 +53,13 @@ h1 em { font-style: normal; color: var(--stage-accent); }
 .hero-feature { grid-row: span 2; }
 .hero-tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 44%, #090e1de8); }
 .hero-tile span { position: absolute; z-index: 1; inset: auto 10px 9px; font-size: clamp(.72rem, 1.06vw, .94rem); line-height: 1.15; font-weight: 800; color: white; }
-.hero-tile .sea { object-position: 50% 11%; }
 .games { padding-block: 34px 54px; }
-.games h2 { margin: 0 0 26px; font-size: clamp(1.95rem, 3.8vw, 3rem); line-height: 1.1; letter-spacing: -.055em; }
-.games h2::after { content: ""; display: block; width: 46px; height: 5px; background: var(--blue); margin-top: 12px; }
+.games h2, .archive h2 { margin: 0 0 26px; font-size: clamp(1.95rem, 3.8vw, 3rem); line-height: 1.1; letter-spacing: -.055em; }
+.games h2::after, .archive h2::after { content: ""; display: block; width: 46px; height: 5px; background: var(--blue); margin-top: 12px; }
 .game-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .game { border: 1px solid var(--line); border-radius: 15px; overflow: hidden; min-width: 0; display: flex; flex-direction: column; background: #f9fafc; }
 .game-art { width: 100%; height: auto; aspect-ratio: 1.93; object-fit: cover; }
 .racing { object-position: center 49%; }
-.sea { object-position: center 10%; }
 .game-copy { display: flex; flex-direction: column; flex: 1; padding: clamp(15px, 2vw, 24px); }
 .genre { margin: 0 0 .45rem; font-size: .83rem; color: var(--blue); font-weight: 800; }
 .game h3 { font-size: clamp(1.12rem, 1.88vw, 1.72rem); line-height: 1.18; letter-spacing: -.045em; margin: 0; }
@@ -76,6 +74,11 @@ h1 em { font-style: normal; color: var(--stage-accent); }
 .apple { background: #20222b; color: #fff; }
 .apple:hover { background: #343745; }
 .policy { align-self: flex-start; margin-top: 14px; font-size: .8rem; color: var(--muted); text-underline-offset: 3px; }
+.archive { padding-block: 32px 54px; border-top: 1px solid #cdd5e2; }
+.archive-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.archive-game { min-width: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #f9fafc; }
+.archive-game img { width: 100%; height: auto; aspect-ratio: 1024 / 500; }
+.archive-game h3 { margin: 0; padding: 13px 15px 15px; font-size: clamp(.9rem, 1.45vw, 1.1rem); line-height: 1.4; word-break: keep-all; }
 .site-footer { display: flex; justify-content: space-between; gap: 20px; align-items: end; padding-block: 22px 38px; border-top: 1px solid var(--line); color: var(--muted); }
 .site-footer h2 { font-size: 1.02rem; margin: 0 0 8px; color: var(--ink); }
 .site-footer a { font-size: .85rem; text-underline-offset: 3px; }
@@ -84,7 +87,7 @@ h1 em { font-style: normal; color: var(--stage-accent); }
   .shell { width: calc(100% - 36px); }
   .hero { grid-template-columns: 1fr; gap: 25px; }
   h1 { font-size: clamp(2.55rem, 7.5vw, 4.4rem); }
-  .game-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .game-grid, .archive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 560px) {
   .site-header { padding-block: 14px; gap: 10px; }
@@ -94,6 +97,7 @@ h1 em { font-style: normal; color: var(--stage-accent); }
   .hero-feature { grid-row: auto; grid-column: span 2; aspect-ratio: 2.048; }
   .hero-tile { aspect-ratio: 2.05; }
   .game-grid { grid-template-columns: 1fr; gap: 15px; }
+  .archive-grid { gap: 12px; }
   .game h3 { font-size: 1.45rem; }
   .site-footer { align-items: start; flex-direction: column; }
 }
